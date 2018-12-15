@@ -1,0 +1,442 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <meta name="format-detection" content="telephone=no">
+
+  <link href="https://fonts.googleapis.com/css?family=Raleway:400,600,700,900" rel="stylesheet">
+  <link rel="stylesheet" href="https://unpkg.com/flickity@2/dist/flickity.min.css">
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="shortcut icon" type="image/png" href="img/favicon.png"/>
+
+  <title>Fifteeen | Restaurant & Bar</title>
+</head>
+<body>
+
+  <!-- Phone navigation -->
+
+  <div class="phone-nav">
+    <input type="checkbox" class="phone-nav__checkbox" id="nav-toggle">
+    <label for="nav-toggle" class="phone-nav__button">
+      <span class="phone-nav__icon">&nbsp;</span>
+    </label>
+    <nav class="phone-nav__navigation" id="phoneNavigation">
+      <a href="#home" class="phone-nav__link active-nav" id="phone-link">Home</a>
+      <a href="#about-us" class="phone-nav__link" id="phone-link">About us</a>
+      <a href="#menu" class="phone-nav__link" id="phone-link">Menu</a>
+      <a href="#drinks" class="phone-nav__link" id="phone-link">Drinks</a>
+      <a href="#reservations" class="phone-nav__link" id="phone-link">Reservations</a>
+    </nav>
+  </div>
+
+  <!-- Hero -->
+
+  <header class="header hero" id="home">
+    <div class="hero__wrapper">
+      <div class="logo">
+        <span class="logo__heading">Fifteen</span>
+      </div>
+      <nav class="nav">
+        <a href="#home" class="nav__link active-nav">Home</a>
+        <a href="#about-us" class="nav__link">About us</a>
+        <a href="#menu" class="nav__link">Menu</a>
+        <a href="#drinks" class="nav__link">Drinks</a>
+        <a href="#reservations" class="nav__link">Reservations</a>
+      </nav>
+      <div class="hero-content">
+        <h1 class="hero-content__heading">The best food in the city</h1>
+        <p class="hero-content__paragraph">Cooking is our passion</p>
+      </div>
+    </div>
+  </header>
+  <main class="main-content">
+
+    <!-- About us section-->
+
+    <section class="about-us container" id="about-us">
+      <div class="about">
+        <h2 class="about__heading">Located in Park Slope, Pacific Tavern is a purveyor of fine American dining from the esteemed Chef Billy Lang.</h2>
+        <p class="about__paragraph">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+        <p class="about__paragraph">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat.</p>
+      </div>
+      <div class="contact">
+        <div class="contact__info">
+          <h3 class="contact__heading">Phone</h3>
+          <p class="contant__paragraph">(347) 555-1234</p>
+        </div>
+        <div class="contact__info">
+          <h3 class="contact__heading">Location</h3>
+          <p class="contant__paragraph">74 5th Avenue<br>at St. Marks Place<br>Brooklyn, NY 11217</p>
+        </div>
+        <div class="contact__info">
+          <h3 class="contact__heading">Hours</h3>
+          <p class="contant__paragraph">M-Th 5p–11p<br>F-Sa 12p–11p<br>Su 10a–11p</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Slider -->
+
+    <div class="main-carousel">
+      <div class="carousel-cell">
+        <img src="img/slider_1.jpg" alt="Facade" class="slider-img">
+      </div>
+      <div class="carousel-cell">
+        <img src="img/slider_2.jpg" alt="Interior view" class="slider-img">
+      </div>
+      <div class="carousel-cell">
+        <img src="img/slider_3.jpg" alt="Spanish paella" class="slider-img">
+      </div>
+      <div class="carousel-cell">
+        <img src="img/slider_4.jpg" alt="Burgers" class="slider-img">
+      </div>
+    </div>
+
+    <!-- Menu section-->
+
+    <section class="menu container" id="menu">
+      <div class="logo logo-mb logo-black">
+        <span class="logo__heading">Fifteen</span>
+        <span class="logo__text">Restaurant</span>
+      </div>
+      <!-- snacks and salads -->
+      <div class="menu-section">
+        <h3 class="menu-section__heading">Snacks x salads</h3>
+        <div class="menu-items-wrapper">
+          <div class="menu-item">
+            <div class="menu-item__flex">
+              <h4 class="menu-item__heading">Primavera Salad</h4>
+              <p class="paragraph">$10</p>
+            </div>
+            <p class="menu-item__paragraph">arugula, cherry tomato, shaved almonds, shallot vinaigrette</p>
+          </div>
+          <div class="menu-item">
+            <div class="menu-item__flex">
+              <h4 class="menu-item__heading">Grilled Calamari</h4>
+              <p class="paragraph">$12</p>
+            </div>
+            <p class="paragraph">tomato sauce, lemon</p>
+          </div>
+          <div class="menu-item">
+            <div class="menu-item__flex">
+              <h4 class="menu-item__heading">Mac and Cheese</h4>
+              <p class="paragraph">$13</p>
+            </div>
+            <p class="menu-item__paragraph">cheddar, gruyere, gouda, truffle oil</p>
+          </div>
+        </div>
+      </div>
+      <!-- sandwiches -->
+      <div class="menu-section">
+        <h3 class="menu-section__heading">Sandwiches</h3>
+        <div class="menu-items-wrapper">
+          <div class="menu-item">
+            <div class="menu-item__flex">
+              <h4 class="menu-item__heading">Alpine</h4>
+              <p class="paragraph">$10</p>
+            </div>
+            <p class="menu-item__paragraph">fontina, gruyere, truffle oil on multigrain toast</p>
+          </div>
+          <div class="menu-item">
+            <div class="menu-item__flex">
+              <h4 class="menu-item__heading">Milanese</h4>
+              <p class="paragraph">$13</p>
+            </div>
+            <p class="menu-item__paragraph">fried chicken, lettuce, tomato, mayo on focaccia</p>
+          </div>
+          <div class="menu-item">
+            <div class="menu-item__flex">
+              <h4 class="menu-item__heading">Flatiron</h4>
+              <p class="paragraph">$15</p>
+            </div>
+            <p class="menu-item__paragraph">steak, havarti, fried onions, chipotle mayo on challah</p>
+          </div>
+        </div>
+      </div>
+      <div class="menu-section">
+        <div class="menu-items-wrapper">
+          <div class="menu-item">
+            <div class="menu-item__flex">
+              <h4 class="menu-item__heading">Raleigh</h4>
+              <p class="paragraph">$13</p>
+            </div>
+            <p class="menu-item__paragraph">coleslaw, barbecue sauce, pickles on sesame roll</p>
+          </div>
+          <div class="menu-item">
+            <div class="menu-item__flex">
+              <h4 class="menu-item__heading">Reuben</h4>
+              <p class="paragraph">$15</p>
+            </div>
+            <p class="menu-item__paragraph">pastrami, coleslaw, russian dressing on rye</p>
+          </div>
+          <div class="menu-item">
+            <div class="menu-item__flex">
+              <h4 class="menu-item__heading">Classic</h4>
+              <p class="paragraph">$15</p>
+            </div>
+            <p class="menu-item__paragraph">ham, unmelted cheddar, mayo on kaiser roll</p>
+          </div>
+        </div>
+      </div>
+      <!-- mains -->
+      <div class="menu-section">
+        <h3 class="menu-section__heading">Mains</h3>
+        <div class="menu-items-wrapper">
+          <div class="menu-item">
+            <div class="menu-item__flex">
+              <h4 class="menu-item__heading">Lobster Bolognese</h4>
+              <p class="paragraph">$28</p>
+            </div>
+            <p class="menu-item__paragraph">linguini, lobster tail, herbs in tomato & garlic broth</p>
+          </div>
+          <div class="menu-item">
+            <div class="menu-item__flex">
+              <h4 class="menu-item__heading">Braised Lamb</h4>
+              <p class="paragraph">$25</p>
+            </div>
+            <p class="menu-item__paragraph">jasmine rice pilaf, roasted almonds, sesame soy reductio</p>
+          </div>
+          <div class="menu-item">
+            <div class="menu-item__flex">
+              <h4 class="menu-item__heading">Burger</h4>
+              <p class="paragraph">$20</p>
+            </div>
+            <p class="menu-item__paragraph">gruyere, fried onions, special sauce on challah roll</p>
+          </div>
+        </div>
+      </div>
+      <div class="menu-section">
+        <div class="menu-items-wrapper">
+          <div class="menu-item">
+            <div class="menu-item__flex">
+              <h4 class="menu-item__heading">Dry-Aged Rib-Eye</h4>
+              <p class="paragraph">$36</p>
+            </div>
+            <p class="menu-item__paragraph">grass-fed, with arugula salad, smashed potatoes</p>
+          </div>
+          <div class="menu-item">
+            <div class="menu-item__flex">
+              <h4 class="menu-item__heading">Salmon Steak</h4>
+              <p class="paragraph">$28</p>
+            </div>
+            <p class="menu-item__paragraph">quinoa, roasted carrots, mustard lemon glaze</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Drinks section-->
+
+    <section class="drinks" id="drinks">
+      <div class="cocktail-bg container-big">
+        <div class="logo logo-mb">
+          <span class="logo__heading">Fifteen</span>
+          <span class="logo__text">Bar</span>
+        </div>
+        <div class="menu-items-wrapper">
+          <!-- Cocktails -->
+          <div class="drinks-section">
+            <div class="menu-section">
+              <h3 class="menu-section__heading">Cocktails</h3>
+                <div class="menu-item__flex">
+                  <h4 class="menu-item__heading">Manhattan</h4>
+                  <p class="paragraph">$11</p>
+                </div>
+                <p class="menu-item__paragraph">rye whisky, sweet vermouth, bitters</p>
+            </div>
+            <div class="menu-section">
+              <div class="menu-item__flex">
+                <h4 class="menu-item__heading">Dark & Stormy</h4>
+                <p class="paragraph">$9</p>
+              </div>
+              <p class="menu-item__paragraph">black rum, ginger beer, lime</p>
+            </div>
+            <div class="menu-section">
+              <div class="menu-item__flex">
+                <h4 class="menu-item__heading">Old Cuban</h4>
+                <p class="paragraph">$11</p>
+              </div>
+              <p class="menu-item__paragraph">aged rum, lime juice, bitters, champagne</p>
+            </div>
+            <div class="menu-section">
+              <div class="menu-item__flex">
+                <h4 class="menu-item__heading">Negroni</h4>
+                <p class="paragraph">$11</p>
+              </div>
+              <p class="menu-item__paragraph">gin, vermouth rosso, campari</p>
+            </div>
+            <div class="menu-section">
+              <div class="menu-item__flex">
+                <h4 class="menu-item__heading">Bloody Mary</h4>
+                <p class="paragraph">$9</p>
+              </div>
+              <p class="menu-item__paragraph">tomato juice, vodka, tabasco, bacon bits</p>
+            </div>
+            <div class="menu-section">
+              <div class="menu-item__flex">
+                <h4 class="menu-item__heading">Green & Amber</h4>
+                <p class="paragraph">$12</p>
+              </div>
+              <p class="menu-item__paragraph">vodka, single-malt scotch, honey, lemon, green tea</p>
+            </div>
+            <div class="menu-section">
+              <div class="menu-item__flex">
+                <h4 class="menu-item__heading">White Russian</h4>
+                <p class="paragraph">$9</p>
+              </div>
+              <p class="menu-item__paragraph">vodka, tia maria, heavy cream</p>
+            </div>
+          </div>
+          <!-- Wine -->
+          <div class="drinks-section">
+            <div class="menu-section">
+              <h3 class="menu-section__heading">Wine</h3>
+              <div class="menu-item__flex">
+                <h4 class="menu-item__heading">Sauvignon Blanc</h4>
+                <p class="paragraph">$18</p>
+              </div>
+              <p class="menu-item__paragraph">cloudy bay, new zealand, 2012</p>
+            </div>
+            <div class="menu-section">
+              <div class="menu-item__flex">
+                <h4 class="menu-item__heading">Pinot Grigio</h4>
+                <p class="paragraph">$13</p>
+              </div>
+              <p class="menu-item__paragraph">corte della torre, veneto, 2012</p>
+            </div>
+            <div class="menu-section">
+              <div class="menu-item__flex">
+                <h4 class="menu-item__heading">Chardonnay</h4>
+                <p class="paragraph">$13</p>
+              </div>
+              <p class="menu-item__paragraph">gavilan, monterey, 2012</p>
+            </div>
+            <div class="menu-section">
+              <div class="menu-item__flex">
+                <h4 class="menu-item__heading">Pinot Noir</h4>
+                <p class="paragraph">$14</p>
+              </div>
+              <p class="menu-item__paragraph">heron, napa, 2011</p>
+            </div>
+            <div class="menu-section">
+              <div class="menu-item__flex">
+                <h4 class="menu-item__heading">Cabernet Sauvignon</h4>
+                <p class="paragraph">$12</p>
+              </div>
+              <p class="menu-item__paragraph">slingshot, napa, 2010</p>
+            </div>
+            <div class="menu-section">
+              <div class="menu-item__flex">
+                <h4 class="menu-item__heading">Pianrosso</h4>
+                <p class="paragraph">$22</p>
+              </div>
+              <p class="menu-item__paragraph">brunello di montacino, toscana, 2003</p>
+            </div>
+            <div class="menu-section">
+              <div class="menu-item__flex">
+                <h4 class="menu-item__heading">Prosecco</h4>
+                <p class="paragraph">$14</p>
+              </div>
+              <p class="menu-item__paragraph">bortolotti, brut, veneto, 2010</p>
+            </div>
+          </div>
+          <!-- Beers -->
+          <div class="drinks-section">
+            <div class="menu-section">
+              <h3 class="menu-section__heading">Beers</h3>
+              <div class="menu-item__flex">
+                <h4 class="menu-item__heading">Lagunitas</h4>
+                <p class="paragraph">$7</p>
+              </div>
+              <p class="menu-item__paragraph">ipa, california</p>
+            </div>
+            <div class="menu-section">
+              <div class="menu-item__flex">
+                <h4 class="menu-item__heading">21st Amendment</h4>
+                <p class="paragraph">$8</p>
+              </div>
+              <p class="menu-item__paragraph">back in black ipa, san francisco</p>
+            </div>
+            <div class="menu-section">
+              <div class="menu-item__flex">
+                <h4 class="menu-item__heading">Breakside</h4>
+                <p class="paragraph">$8</p>
+              </div>
+              <p class="menu-item__paragraph">wanderlust ipa, oregon</p>
+            </div>
+            <div class="menu-section">
+              <div class="menu-item__flex">
+                <h4 class="menu-item__heading">Hill Farmstead</h4>
+                <p class="paragraph">$11</p>
+              </div>
+              <p class="menu-item__paragraph">edward apa, vermont</p>
+            </div>
+            <div class="menu-section">
+              <div class="menu-item__flex">
+                <h4 class="menu-item__heading">Alchemist</h4>
+                <p class="paragraph">$15</p>
+              </div>
+              <p class="menu-item__paragraph">heady topper, vermont</p>
+            </div>
+            <div class="menu-section">
+              <div class="menu-item__flex">
+                <h4 class="menu-item__heading">Hofbräu</h4>
+                <p class="paragraph">$8</p>
+              </div>
+              <p class="menu-item__paragraph">dunkel, munich</p>
+            </div>
+            <div class="menu-section">
+              <div class="menu-item__flex">
+                <h4 class="menu-item__heading">Delirium Tremens</h4>
+                <p class="paragraph">$12</p>
+              </div>
+              <p class="menu-item__paragraph">golden ale, belgium</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Reservations section -->
+
+    <section class="reservations container" id="reservations">
+      <div class="reservation">
+        <h3 class="reservation__heading">Reservations</h3>
+        <p class="reservation__paragraph">Call (347) 555–1234 from 5a – 11p daily, or book online with OpenTable. Reservations required for parties of 6 or more.</p>
+        <a href="#" class="cta">Find a table</a>
+      </div>
+    </section>
+  </main>
+
+  <!-- Footer Section -->
+
+  <footer class="footer">
+    <div class="footer-nav">
+      <div class="footer-nav__flex">
+        <a href="https://twitter.com/" target="_blank" class="footer-nav__icon">
+          <img src="img/twitter.png" alt="Instagram logo" class="footer-nav__img">
+        </a>
+      </div>
+      <div class="footer-nav__flex">
+        <a href="https://www.instagram.com/" target="_blank" class="footer-nav__icon">
+          <img src="img/instagram.png" alt="Instagram logo" class="footer-nav__img">
+        </a>
+      </div>
+      <div class="footer-nav__flex">
+        <a href="https://vimeo.com/" target="_blank" class="footer-nav__icon">
+          <img src="img/vimeo.png" alt="Instagram logo" class="footer-nav__img">
+        </a>
+      </div>
+    </div>
+    <div class="footer-content container">
+      <p class="paragraph">Fifteen Restaurant & Bar, 74 5TH AVENUE, BROOKLYN, NY 11217212-555-1212</p>
+      <p class="copyright">&copy; 2018 FIFTEEN. All rights reserved</p>
+    </div>
+  </footer>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+  <script src="https://unpkg.com/flickity@2/dist/flickity.pkgd.min.js"></script>
+  <script src="index.js"></script>
+</body>
+</html>

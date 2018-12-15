@@ -1,0 +1,493 @@
+.hero{
+  height: 125vh;
+  background-image: url(../img/hero-bg.jpg);
+  background-image: linear-gradient(to bottom, rgba(46, 46, 44, 0.8), rgba(46, 46, 44, 0.8)), url(../img/hero-bg.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center center;
+  display: flex;
+  justify-content: center;
+
+  @include responsive(tab-land) { //widh < 1200px?
+    height: 110vh;
+  }
+
+  @include responsive(tab-port) { //widh < 900px?
+    height: 83vh;
+  }
+
+  @include responsive(phone-land) { //widh < 740px?
+    height: 120vh;
+  }
+
+  @include responsive(phone) { //widh < 600px?
+    height: 83vh;
+  }
+
+  &__wrapper {
+    width: 63.5rem;
+    position: relative;
+    padding: 0 2rem;
+  }
+}
+
+.logo {
+  width: fit-content;
+  color: $color-white;
+  text-transform: uppercase;
+  margin: 2rem auto;
+  border-top: 3px solid $color-white;
+  border-bottom: 3px solid $color-white;
+  text-align: center;
+
+  &__heading {
+    font-size: 4rem;
+    font-weight: 900;
+    letter-spacing: 1.3rem;
+    margin-right: -1.3rem;
+  }
+
+  &__text {
+    display: block;
+    font-size: 1.2rem;
+    font-weight: 600;
+    letter-spacing: 0.8rem;
+    padding-bottom: 1rem;
+  }
+}
+
+.logo-mb {
+  margin-bottom: 8rem;
+}
+
+.logo-black {
+  color: #222;
+  border-top: 3px solid #222;
+  border-bottom: 3px solid #222;
+}
+
+.nav {
+  font-weight: 600;
+  text-transform: uppercase;
+  transition: all 400ms ease;
+  position: absolute;
+
+  @include responsive(tab-port) { //widh < 900px?
+    display: none;
+  }
+
+  &__link {
+    text-decoration: none;
+    color: $color-light-gray;
+    transition: all 300ms;
+
+    &:not(:last-child) {
+      margin-right: 6rem;
+    }
+
+    &:hover {
+      color: $color-orange;
+    }
+  }
+}
+
+.active-nav {
+  color: $color-orange !important;
+}
+
+.sticky {
+  position: fixed;
+  padding: 1rem 0;
+  width: 100%;
+  z-index: 1;
+  text-align: center;
+  background: #222;
+  left: 0;
+  top: 0;
+}
+
+.hero-content {
+  width: 100%;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  padding: 0 2rem;
+  text-align: center;
+
+  &__heading {
+    font-size: 8rem;
+    line-height: 1;
+    color: $color-white;
+  }
+
+  &__paragraph {
+    font-size: 4rem;
+    color: $color-orange;
+  }
+}
+
+.phone-nav {
+  display: none;
+
+  @include responsive(tab-port) { //widh < 900px?
+    display: block;
+  }
+
+  &__checkbox {
+    display: none;
+  }
+
+  &__button {
+    width: 5rem;
+    height: 5rem;
+    position: fixed;
+    top: 3.5rem;
+    left: 3.5rem;
+    background: #222;
+    z-index: 15;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+
+    @include responsive(phone-land) { //widh < 700px?
+      width: 4rem;
+      height: 4rem;
+      top: 2rem;
+      left: 2rem;
+    }
+  }
+
+  &__navigation {
+    width: 0;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    position: fixed;
+    top: 0;
+    left: 0;
+    background: #222;
+    opacity: 0;
+    z-index: 10;
+    transition: all 200ms ease-out;
+  }
+
+  &__link {
+    font-size: 4rem;
+    font-weight: 400;
+    color: $color-light-gray;
+    text-decoration: none;
+    text-transform: uppercase;
+    margin-bottom: 1rem;
+  }
+
+  &__checkbox:checked ~ &__navigation {
+    width: 100%;
+    opacity: 1;
+  }
+
+  // ICON
+
+  &__icon {
+    position: relative;
+    display: flex;
+
+    &, &::before, &::after {
+      width: 2rem;
+      height: 2px;
+      background: $color-white;
+      display: inline-block;
+    }
+
+    &::before, &::after {
+      content: "";
+      position: absolute;
+      left: 0;
+      transition: all 300ms;
+    }
+
+    &::before { top: -.8rem; }
+    &::after { top: .8rem; }
+  }
+
+  &__checkbox:checked + &__button &__icon {
+    background: transparent;
+  }
+
+  &__checkbox:checked + &__button &__icon::before {
+    top: 0;
+    transform: rotate(135deg);
+  }
+
+  &__checkbox:checked + &__button &__icon::after {
+    top: 0;
+    transform: rotate(-135deg);
+  }
+}
+
+.about {
+  width: 70%;
+
+  @include responsive(phone) { //widh < 600px?
+    width: 100%;
+    margin-bottom: 4rem;
+  }
+
+  &__heading {
+    font-size: 3rem;
+    margin-bottom: $margin-6;
+
+    @include responsive(phone) { //widh < 600px?
+      margin-bottom: 4rem;
+    }
+  }
+
+  &__paragraph {
+
+    &:not(:last-child) {
+      margin-bottom: 2rem;
+    }
+  }
+}
+
+.contact {
+  width: 20%;
+
+  @include responsive(phone) { //widh < 600px?
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+  }
+
+  &__info {
+
+    &:not(:last-child) {
+      margin-bottom: $margin-6;
+
+      @include responsive(phone) { //widh < 600px?
+        margin-bottom: 4rem;
+      }
+    }
+  }
+
+  &__heading {
+    font-weight: 600;
+    text-transform: uppercase;
+    margin-bottom: 1rem;
+    color: $color-orange;
+  }
+}
+
+// SLIDER CONTROLLER
+.carousel-cell {
+  width: 100%;
+  height: 95vh;
+  margin-right: 1rem;
+
+  @include responsive(tab-land) { //widh < 1200px?
+    height: 80vh;
+  }
+
+  @include responsive(tab-port) { //widh < 900px?
+    height: 55vh;
+  }
+
+  @include responsive(phone-land) { //widh < 740px?
+    height: 70vh;
+  }
+
+  @include responsive(phone) { //widh < 600px?
+    height: 45vh;
+  }
+}
+
+.slider-img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.flickity-button-icon {
+  fill: $color-white;
+}
+
+.flickity-button {
+  background: transparent;
+
+  &:hover {
+    background: none;
+  }
+}
+
+.flickity-page-dots {
+  bottom: 2rem;
+}
+
+.flickity-page-dots .dot {
+  width: 1.2rem;
+  height: 1.2rem;
+  opacity: 1;
+  background: transparent;
+  border: 2px solid $color-light-gray;
+}
+
+.flickity-page-dots .dot.is-selected {
+  background: $color-white;
+}
+
+// MENU AND ITEMS
+
+.menu-section {
+  margin-bottom: 3rem;
+
+  &__heading {
+    font-weight: 600;
+    text-transform: uppercase;
+    text-align: center;
+    margin-bottom: 4rem;
+    color: $color-orange;
+  }
+}
+
+.menu-items-wrapper {
+  display: flex;
+
+  @include responsive(phone) { //widh < 600px?
+    flex-direction: column;
+  }
+}
+
+.menu-item {
+  width: calc(100% / 3);
+
+  @include responsive(phone) { //widh < 600px?
+    width: 100%;
+    margin-bottom: 2rem;
+  }
+
+  &:not(:last-child) {
+    margin-right: 4.5rem;
+  }
+
+  &__flex {
+    display: flex;
+    justify-content: space-between;
+  }
+
+  &__heading {
+    font-size: 1.6rem;
+  }
+
+  &__paragraph {
+    margin-right: 5rem;
+  }
+}
+
+// COCTAILS AND ITEMS
+.cocktail-bg {
+  background-image: url(../img/cocktail.jpg);
+  background-image: linear-gradient(to bottom, rgba(20, 20, 20, 0.8) 70%, rgba(40, 40, 40, 0.8)), url(../img/cocktail.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  color: $color-white;
+}
+
+.drinks-section {
+  width: calc(100% / 3);
+
+  @include responsive(phone) { //widh < 600px?
+    width: 100%;
+  }
+
+  &:not(:last-child) {
+    margin-right: 4.5rem;
+  }
+}
+
+.reservation {
+  width: 50%;
+  text-align: center;
+  padding: 1rem 0;
+
+  &__heading {
+    text-align: center;
+    font-weight: 600;
+    text-transform: uppercase;
+    margin-bottom: 1rem;
+    color: $color-orange;
+  }
+
+  &__paragraph {
+    margin-bottom: 2rem;
+  }
+}
+
+.cta {
+  font-size: 1.3rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  color: $color-white;
+  background: $color-gray;
+  padding: 1.2rem 2.5rem;
+  border-radius: 2.5rem;
+  text-decoration: none;
+  display: inline-block;
+  transition: all 300ms;
+
+  &:hover {
+    color: $color-orange;
+    background: $color-dark-gray;
+  }
+}
+
+.footer-nav {
+  padding: 3rem 0;
+  background: $color-gray;
+  display: flex;
+  justify-content: center;
+
+  &__flex {
+    width: 4rem;
+  	height: 4rem;
+    border: 2px solid $color-white;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: all 300ms;
+
+    &:not(:last-child) {
+      margin-right: 1rem;
+    }
+
+    &:hover {
+      border: none;
+      background: $color-orange;
+    }
+  }
+
+  &__icon {
+    height: 50%;
+    width: 50%;
+  }
+
+  &__img {
+    height: 100%;
+  }
+}
+
+.footer-content {
+  background: #222;
+  color: $color-white;
+  text-align: center;
+  font-size: 1.4rem;
+  font-weight: 600;
+}
+
+.copyright {
+  margin-top: 2rem;
+}

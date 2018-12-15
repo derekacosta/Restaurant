@@ -1,0 +1,33 @@
+.container {
+  padding: 6rem 10rem;
+
+  @include responsive(tab-land) { //widh < 1200px?
+    padding: 6rem 4rem;
+  }
+
+  @include responsive(phone) { //widh < 600px?
+    padding: 4rem 2rem;
+  }
+}
+
+.container-big {
+  padding: 14rem 10rem;
+
+  @include responsive(tab-land) { //widh < 1200px?
+    padding: 14rem 4rem;
+  }
+}
+
+.about-us {
+  display: flex;
+  justify-content: space-between;
+
+  @include responsive(phone) { //widh < 600px?
+    flex-direction: column;
+  }
+}
+
+.reservations {
+  display: flex;
+  justify-content: center;
+}
